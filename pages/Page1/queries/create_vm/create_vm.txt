@@ -6,5 +6,8 @@
 	"is_windows_image": {{WinCheckJS.isWindowsTemplate(select_template.selectedOptionLabel)}},
 	"ram_size": {{input_ram_size.text}},
 	"disk_size_gb": [{{JSON.stringify(input_disk_size_gb.text)}}],
-	"cpu_number": {{select_cpu_core_number.selectedOptionValue}}
+	"cpu_number": {{select_cpu_core_number.selectedOptionValue}},
+	"owner": {{appsmith.user.name}},
+	"shutdown_date": {{date_picker_shutdown.selectedDate}},
+  "deletion_date": {{date_picker_deletion.selectedDate}}
 }

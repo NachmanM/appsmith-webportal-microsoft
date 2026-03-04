@@ -32,7 +32,7 @@
   "mobileRightColumn": 28,
   "mobileTopRow": 12,
   "needsErrorInfo": false,
-  "onClick": "{{create_vm.run()}}",
+  "onClick": "{{CreateVMandUpdateIP.runMyApisSequentially();}}",
   "parentColumnSpace": 4.734375,
   "parentId": "0",
   "parentRowSpace": 10,
