@@ -11,6 +11,10 @@
     {
       "id": "CreateVM",
       "isDefault": true
+    },
+    {
+      "id": "DetailsVM",
+      "isDefault": false
     }
   ],
   "unpublishedAppLayout": {

@@ -1,24 +1,23 @@
 {
-  "gitSyncId": "69a2ef7fe1f0925138a365ca_0271f674-d06e-45b7-89f1-e691d4bb0edc",
+  "gitSyncId": "69a2ef7fe1f0925138a365ca_38f3714e-f4be-441f-a61f-e7d5736c4038",
   "unpublishedPage": {
     "isHidden": false,
     "layouts": [
       {
         "dsl": {
           "backgroundColor": "none",
-          "bottomRow": 750,
+          "bottomRow": 470,
           "canExtend": true,
           "containerStyle": "none",
           "detachFromLayout": true,
           "dynamicBindingPathList": [],
-          "dynamicTriggerPathList": [],
           "leftColumn": 0,
-          "minHeight": 1292,
+          "minHeight": 700,
           "parentColumnSpace": 1,
           "parentRowSpace": 1,
-          "rightColumn": 4896,
+          "rightColumn": 1224,
           "snapColumns": 64,
-          "snapRows": 124,
+          "snapRows": 68,
           "topRow": 0,
           "type": "CANVAS_WIDGET",
           "version": 94,
@@ -27,7 +26,7 @@
         }
       }
     ],
-    "name": "CreateVM",
-    "slug": "createvm"
+    "name": "DetailsVM",
+    "slug": "detailsvm"
   }
 }
