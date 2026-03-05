@@ -1,6 +1,6 @@
 {
   "gitSyncId": "69a2ef7fe1f0925138a365ca_85206c26-9463-4c8f-9518-6a777c3c04d9",
-  "id": "Page1_create_vm",
+  "id": "CreateVM_create_vm",
   "pluginId": "restapi-plugin",
   "pluginType": "API",
   "unpublishedAction": {
@@ -38,7 +38,7 @@
       }
     ],
     "name": "create_vm",
-    "pageId": "Page1",
+    "pageId": "CreateVM",
     "runBehaviour": "MANUAL",
     "userSetOnLoad": false
   }

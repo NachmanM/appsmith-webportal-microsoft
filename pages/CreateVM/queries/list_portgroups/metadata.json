@@ -1,6 +1,6 @@
 {
-  "gitSyncId": "69a2ef7fe1f0925138a365ca_aa7c8101-8d05-46ef-98a2-b6e0a3bab057",
-  "id": "Page1_list_folders",
+  "gitSyncId": "69a2ef7fe1f0925138a365ca_72ad9ba0-f98b-4611-a645-a2b9809075a3",
+  "id": "CreateVM_list_portgroups",
   "pluginId": "restapi-plugin",
   "pluginType": "API",
   "unpublishedAction": {
@@ -21,7 +21,7 @@
       "httpMethod": "GET",
       "httpVersion": "HTTP11",
       "paginationType": "NONE",
-      "path": "/list-folders",
+      "path": "/list-portgroups",
       "pluginSpecifiedTemplates": [
         {
           "value": true
@@ -40,8 +40,8 @@
       "pluginId": "restapi-plugin"
     },
     "dynamicBindingPathList": [],
-    "name": "list_folders",
-    "pageId": "Page1",
+    "name": "list_portgroups",
+    "pageId": "CreateVM",
     "runBehaviour": "AUTOMATIC",
     "userSetOnLoad": false
   }

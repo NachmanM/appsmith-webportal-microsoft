@@ -1,9 +1,9 @@
 {
   "gitSyncId": "69a2ef7fe1f0925138a365ca_e1db251c-9a17-47f4-811d-ef85b0654bc7",
-  "id": "Page1_CreateVMandUpdateIP",
+  "id": "CreateVM_CreateVMandUpdateIP",
   "unpublishedCollection": {
     "name": "CreateVMandUpdateIP",
-    "pageId": "Page1",
+    "pageId": "CreateVM",
     "pluginId": "js-plugin",
     "pluginType": "JS",
     "variables": []

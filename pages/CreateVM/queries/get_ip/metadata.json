@@ -1,6 +1,6 @@
 {
   "gitSyncId": "69a2ef7fe1f0925138a365ca_16273d45-22b7-4d87-9a83-bdb9285cdb7b",
-  "id": "Page1_get_ip",
+  "id": "CreateVM_get_ip",
   "pluginId": "restapi-plugin",
   "pluginType": "API",
   "unpublishedAction": {
@@ -30,7 +30,7 @@
     },
     "dynamicBindingPathList": [],
     "name": "get_ip",
-    "pageId": "Page1",
+    "pageId": "CreateVM",
     "runBehaviour": "AUTOMATIC",
     "userSetOnLoad": false
   }
