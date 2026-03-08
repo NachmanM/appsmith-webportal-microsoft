@@ -31,7 +31,7 @@
     "dynamicBindingPathList": [],
     "name": "get_ip",
     "pageId": "CreateVM",
-    "runBehaviour": "AUTOMATIC",
+    "runBehaviour": "MANUAL",
     "userSetOnLoad": false
   }
 }

@@ -1,6 +1,6 @@
 {
   "gitSyncId": "69a2ef7fe1f0925138a365ca_a0aed7d5-696d-4794-9551-962a302001e1",
-  "id": "DetailsVM_Api1",
+  "id": "DetailsVM_VM_Details",
   "pluginId": "restapi-plugin",
   "pluginType": "API",
   "unpublishedAction": {
@@ -44,9 +44,9 @@
         "key": "path"
       }
     ],
-    "name": "Api1",
+    "name": "VM_Details",
     "pageId": "DetailsVM",
-    "runBehaviour": "AUTOMATIC",
-    "userSetOnLoad": false
+    "runBehaviour": "ON_PAGE_LOAD",
+    "userSetOnLoad": true
   }
 }

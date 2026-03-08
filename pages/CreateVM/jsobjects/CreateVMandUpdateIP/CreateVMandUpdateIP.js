@@ -1,27 +1,41 @@
 export default {
-	runMyApisSequentially: async () => {
-		try {
-			const vm_name = input_vm_name.text
-			// 1. Run the initial API call and wait for it to finish
-			await get_ip.run();
+    runMyApisSequentially: async () => {
+        const vmName = input_vm_name.text;
+        let tempMoid = null;
 
-			// 2. Notify the user of the expected duration
-			showModal('modal_vm_creation');
+        try {
+            const insertResult = await Insert_Pending_VM.run();
+            
+            // Extract the 'pending-...' MOID returned by PostgreSQL
+            tempMoid = insertResult[0].vm_moid; 
 
-			// 3. Run the POST API call and wait for it to finish
-			await create_vm.run();
+            // 3. Immediately refresh the Tree UI to display the pending VM
+            await get_vm_cached.run();
 
-			// 4. Run the final API call after the POST API succeeds
-			await get_ip.run();
+            // 4. Lock UI interactions during API handoff
+            showModal('modal_vm_creation');
 
-			closeModal('modal_vm_creation')
+            const rawUuid = tempMoid.replace('pending-', '');
+					
+            await create_vm.run({ transaction_uuid: rawUuid });
 
-			// 5. Notify the user of success
-			showAlert(`The VM ${vm_name} has been created successfully.`, "success");
-		} catch (error) {
-			// Handle any errors that occur at any stage in the chain
-			showAlert("An error occurred during execution.", "error");
-			console.error(error);
-		}
-	}
+            // 7. Success state finalization
+            closeModal('modal_vm_creation');
+            showAlert(`Provisioning sequence initiated for VM: ${vmName}.`, "success");
+
+        } catch (error) {
+            // 8. Critical Rollback Procedure
+            // If create_vm.run() or any other step fails/times out, purge the synthetic database record.
+            if (tempMoid) {
+                await Delete_Pending_VM.run({ moid: tempMoid });
+                
+                // Force a UI tree refresh to physically remove the orphaned pending VM from the screen.
+                await get_vm_cached.run(); 
+            }
+
+            closeModal('modal_vm_creation');
+            showAlert(`Execution failure for ${vmName}. System state rolled back.`, "error");
+            console.error(error);
+        }
+    }
 }

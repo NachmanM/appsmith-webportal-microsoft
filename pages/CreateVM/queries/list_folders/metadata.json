@@ -42,7 +42,7 @@
     "dynamicBindingPathList": [],
     "name": "list_folders",
     "pageId": "CreateVM",
-    "runBehaviour": "AUTOMATIC",
-    "userSetOnLoad": false
+    "runBehaviour": "ON_PAGE_LOAD",
+    "userSetOnLoad": true
   }
 }

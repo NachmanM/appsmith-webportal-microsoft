@@ -9,5 +9,7 @@
 	"cpu_number": {{select_cpu_core_number.selectedOptionValue}},
 	"owner": {{appsmith.user.name}},
 	"shutdown_date": {{date_picker_shutdown.selectedDate}},
-  "deletion_date": {{date_picker_deletion.selectedDate}}
+  "deletion_date": {{date_picker_deletion.selectedDate}},
+
+	"transaction_uuid": "{{this.params.transaction_uuid}}"
 }
