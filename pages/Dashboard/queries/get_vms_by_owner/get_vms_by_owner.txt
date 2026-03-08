@@ -1,0 +1,9 @@
+SELECT 
+    owner AS label, 
+    COUNT(id) AS value
+FROM 
+    terraform_remote_state.state_metadata
+GROUP BY 
+    owner
+ORDER BY 
+    value DESC;

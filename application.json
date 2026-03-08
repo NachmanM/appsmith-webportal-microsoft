@@ -9,6 +9,14 @@
   "evaluationVersion": 2,
   "pages": [
     {
+      "id": "Dashboard",
+      "isDefault": false
+    },
+    {
+      "id": "Products",
+      "isDefault": false
+    },
+    {
       "id": "CreateVM",
       "isDefault": true
     },

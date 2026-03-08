@@ -1,0 +1,833 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "animateLoading": true,
+  "borderColor": "#E0DEDE",
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "borderWidth": "1",
+  "bottomRow": 79,
+  "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
+  "canFreezeColumn": false,
+  "cellBackground": "{{ currentRow.deletion_days_left < 1 ? \"#ffcccc\" : (currentRow.deletion_days_left <= 3 ? \"#fff5cc\" : \"transparent\") }}",
+  "childStylesheet": {
+    "button": {
+      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+      "boxShadow": "none",
+      "buttonColor": "{{appsmith.theme.colors.primaryColor}}"
+    },
+    "editActions": {
+      "discardBorderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+      "discardButtonColor": "{{appsmith.theme.colors.primaryColor}}",
+      "saveBorderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+      "saveButtonColor": "{{appsmith.theme.colors.primaryColor}}"
+    },
+    "iconButton": {
+      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+      "boxShadow": "none",
+      "buttonColor": "{{appsmith.theme.colors.primaryColor}}"
+    },
+    "menuButton": {
+      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+      "boxShadow": "none",
+      "menuColor": "{{appsmith.theme.colors.primaryColor}}"
+    }
+  },
+  "columnOrder": [
+    "customColumn1",
+    "customColumn2",
+    "customColumn3",
+    "id",
+    "vm_identifier",
+    "owner",
+    "vcenter_vm_name",
+    "current_vcenter_status",
+    "folder_name",
+    "shutdown_date",
+    "deletion_date",
+    "shutdown_days_left",
+    "shutdown_hours_left",
+    "deletion_days_left",
+    "deletion_hours_left",
+    "EditActions1"
+  ],
+  "columnUpdatedAt": 1772989581155,
+  "columnWidthMap": {
+    "Category": 122,
+    "CostPrice": 115,
+    "Id": 60,
+    "Image": 86,
+    "LowStock": 123,
+    "Name": 181,
+    "SalePrice": 124,
+    "TotalStock": 112,
+    "customColumn1": 139,
+    "customColumn2": 89,
+    "customColumn3": 88,
+    "shutdown_days_left": 195,
+    "shutdown_hours_left": 195,
+    "status": 75,
+    "step": 62,
+    "task": 245
+  },
+  "defaultPageSize": 0,
+  "defaultSelectedRowIndex": 0,
+  "defaultSelectedRowIndices": [
+    0
+  ],
+  "delimiter": ",",
+  "displayName": "Table",
+  "dynamicBindingPathList": [
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "boxShadow"
+    },
+    {
+      "key": "tableData"
+    },
+    {
+      "key": "primaryColumns.customColumn1.computedValue"
+    },
+    {
+      "key": "primaryColumns.EditActions1.saveButtonColor"
+    },
+    {
+      "key": "primaryColumns.EditActions1.saveBorderRadius"
+    },
+    {
+      "key": "primaryColumns.EditActions1.discardBorderRadius"
+    },
+    {
+      "key": "primaryColumns.EditActions1.isSaveDisabled"
+    },
+    {
+      "key": "primaryColumns.EditActions1.isDiscardDisabled"
+    },
+    {
+      "key": "primaryColumns.customColumn2.buttonColor"
+    },
+    {
+      "key": "primaryColumns.customColumn2.borderRadius"
+    },
+    {
+      "key": "primaryColumns.customColumn2.boxShadow"
+    },
+    {
+      "key": "primaryColumns.customColumn1.textColor"
+    },
+    {
+      "key": "primaryColumns.id.computedValue"
+    },
+    {
+      "key": "primaryColumns.vm_identifier.computedValue"
+    },
+    {
+      "key": "primaryColumns.owner.computedValue"
+    },
+    {
+      "key": "primaryColumns.vcenter_vm_name.computedValue"
+    },
+    {
+      "key": "primaryColumns.current_vcenter_status.computedValue"
+    },
+    {
+      "key": "primaryColumns.folder_name.computedValue"
+    },
+    {
+      "key": "primaryColumns.shutdown_date.computedValue"
+    },
+    {
+      "key": "primaryColumns.deletion_date.computedValue"
+    },
+    {
+      "key": "primaryColumns.shutdown_days_left.computedValue"
+    },
+    {
+      "key": "primaryColumns.shutdown_hours_left.computedValue"
+    },
+    {
+      "key": "primaryColumns.deletion_days_left.computedValue"
+    },
+    {
+      "key": "primaryColumns.deletion_hours_left.computedValue"
+    },
+    {
+      "key": "cellBackground"
+    },
+    {
+      "key": "primaryColumns.customColumn1.cellBackground"
+    },
+    {
+      "key": "primaryColumns.EditActions1.cellBackground"
+    },
+    {
+      "key": "primaryColumns.customColumn2.cellBackground"
+    },
+    {
+      "key": "primaryColumns.customColumn3.cellBackground"
+    },
+    {
+      "key": "primaryColumns.id.cellBackground"
+    },
+    {
+      "key": "primaryColumns.vm_identifier.cellBackground"
+    },
+    {
+      "key": "primaryColumns.owner.cellBackground"
+    },
+    {
+      "key": "primaryColumns.vcenter_vm_name.cellBackground"
+    },
+    {
+      "key": "primaryColumns.current_vcenter_status.cellBackground"
+    },
+    {
+      "key": "primaryColumns.folder_name.cellBackground"
+    },
+    {
+      "key": "primaryColumns.shutdown_date.cellBackground"
+    },
+    {
+      "key": "primaryColumns.deletion_date.cellBackground"
+    },
+    {
+      "key": "primaryColumns.shutdown_days_left.cellBackground"
+    },
+    {
+      "key": "primaryColumns.shutdown_hours_left.cellBackground"
+    },
+    {
+      "key": "primaryColumns.deletion_days_left.cellBackground"
+    },
+    {
+      "key": "primaryColumns.deletion_hours_left.cellBackground"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "primaryColumns.EditActions1.isSaveDisabled"
+    },
+    {
+      "key": "primaryColumns.EditActions1.isDiscardDisabled"
+    },
+    {
+      "key": "primaryColumns.EditActions1.onSave"
+    },
+    {
+      "key": "primaryColumns.customColumn2.onClick"
+    },
+    {
+      "key": "primaryColumns.customColumn1.textColor"
+    },
+    {
+      "key": "tableData"
+    },
+    {
+      "key": "cellBackground"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onRowSelected"
+    },
+    {
+      "key": "primaryColumns.customColumn2.onClick"
+    },
+    {
+      "key": "primaryColumns.EditActions1.onSave"
+    },
+    {
+      "key": "primaryColumns.customColumn3.onClick"
+    }
+  ],
+  "enableClientSideSearch": true,
+  "enableServerSideFiltering": false,
+  "hideCard": false,
+  "horizontalAlignment": "LEFT",
+  "iconSVG": "/static/media/icon.db8a9cbd2acd22a31ea91cc37ea2a46c.svg",
+  "inlineEditingSaveOption": "ROW_LEVEL",
+  "isDeprecated": false,
+  "isLoading": false,
+  "isSortable": true,
+  "isVisible": true,
+  "isVisibleDownload": true,
+  "isVisibleFilters": true,
+  "isVisiblePagination": true,
+  "isVisibleSearch": true,
+  "key": "7dc9aju6jj",
+  "label": "Data",
+  "leftColumn": 0,
+  "onRowSelected": "",
+  "parentColumnSpace": 19.8125,
+  "parentId": "0",
+  "parentRowSpace": 10,
+  "primaryColumnId": "Id",
+  "primaryColumns": {
+    "EditActions1": {
+      "alias": "EditActions1",
+      "allowCellWrapping": false,
+      "buttonStyle": "rgb(3, 179, 101)",
+      "cellBackground": "{{ currentRow.deletion_days_left < 1 ? \"#ffcccc\" : (currentRow.deletion_days_left <= 3 ? \"#fff5cc\" : \"transparent\") }}",
+      "columnType": "editActions",
+      "computedValue": "",
+      "discardActionLabel": "Discard",
+      "discardBorderRadius": "{{tbl_products.processedTableData.map((currentRow, currentIndex) => ( appsmith.theme.borderRadius.appBorderRadius))}}",
+      "discardButtonColor": "#F22B2B",
+      "discardButtonVariant": "TERTIARY",
+      "discardIconAlign": "left",
+      "enableFilter": true,
+      "enableSort": true,
+      "horizontalAlignment": "LEFT",
+      "id": "EditActions1",
+      "index": 7,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": true,
+      "isDisabled": false,
+      "isDiscardDisabled": "{{tbl_products.processedTableData.map((currentRow, currentIndex) => ( !tbl_products.updatedRowIndices.includes(currentIndex)))}}",
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveDisabled": "{{tbl_products.processedTableData.map((currentRow, currentIndex) => ( !tbl_products.updatedRowIndices.includes(currentIndex)))}}",
+      "isSaveVisible": true,
+      "isVisible": true,
+      "label": "Save / Discard",
+      "onSave": "{{utils.updateProduct('TABLE')}}",
+      "originalId": "EditActions1",
+      "saveActionLabel": "Save",
+      "saveBorderRadius": "{{tbl_products.processedTableData.map((currentRow, currentIndex) => ( appsmith.theme.borderRadius.appBorderRadius))}}",
+      "saveButtonColor": "{{tbl_products.processedTableData.map((currentRow, currentIndex) => ( appsmith.theme.colors.primaryColor))}}",
+      "saveIconAlign": "left",
+      "sticky": "right",
+      "textSize": "0.875rem",
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
+    "current_vcenter_status": {
+      "alias": "current_vcenter_status",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "cellBackground": "{{ currentRow.deletion_days_left < 1 ? \"#ffcccc\" : (currentRow.deletion_days_left <= 3 ? \"#fff5cc\" : \"transparent\") }}",
+      "columnType": "text",
+      "computedValue": "{{(() => { const tableData = tbl_products.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"current_vcenter_status\"])) : current_vcenter_status })()}}",
+      "currencyCode": "USD",
+      "decimals": 0,
+      "enableFilter": true,
+      "enableSort": true,
+      "fontStyle": "",
+      "horizontalAlignment": "LEFT",
+      "id": "current_vcenter_status",
+      "index": 4,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": true,
+      "label": "current_vcenter_status",
+      "notation": "standard",
+      "originalId": "current_vcenter_status",
+      "sticky": "",
+      "textColor": "",
+      "textSize": "0.875rem",
+      "thousandSeparator": true,
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
+    "customColumn1": {
+      "alias": "Stock",
+      "allowCellWrapping": false,
+      "buttonStyle": "rgb(3, 179, 101)",
+      "cellBackground": "{{ currentRow.deletion_days_left < 1 ? \"#ffcccc\" : (currentRow.deletion_days_left <= 3 ? \"#fff5cc\" : \"transparent\") }}",
+      "columnType": "text",
+      "computedValue": "{{(() => { const tableData = tbl_products.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => ( \ncurrentRow.TotalStock || 0 + ` (${utils.returnStockStatus(currentRow.TotalStock, currentRow.LowStock).status})`\n)) :  \ncurrentRow.TotalStock || 0 + ` (${utils.returnStockStatus(currentRow.TotalStock, currentRow.LowStock).status})`\n })()}}",
+      "enableFilter": true,
+      "enableSort": true,
+      "horizontalAlignment": "LEFT",
+      "id": "customColumn1",
+      "index": 6,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": true,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": true,
+      "label": "Stock",
+      "labelColor": "#FFFFFF",
+      "originalId": "customColumn1",
+      "sticky": "",
+      "textColor": "{{tbl_products.processedTableData.map((currentRow, currentIndex) => ( utils.returnStockStatus(currentRow.TotalStock, currentRow.LowStock).color))}}",
+      "textSize": "0.875rem",
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
+    "customColumn2": {
+      "alias": "Action",
+      "allowCellWrapping": false,
+      "borderRadius": "{{tbl_products.processedTableData.map((currentRow, currentIndex) => ( appsmith.theme.borderRadius.appBorderRadius))}}",
+      "boxShadow": "{{tbl_products.processedTableData.map((currentRow, currentIndex) => ( 'none'))}}",
+      "buttonColor": "{{tbl_products.processedTableData.map((currentRow, currentIndex) => ( appsmith.theme.colors.primaryColor))}}",
+      "buttonLabel": "View",
+      "buttonStyle": "rgb(3, 179, 101)",
+      "cellBackground": "{{ currentRow.deletion_days_left < 1 ? \"#ffcccc\" : (currentRow.deletion_days_left <= 3 ? \"#fff5cc\" : \"transparent\") }}",
+      "columnType": "button",
+      "computedValue": "",
+      "customAlias": "",
+      "enableFilter": true,
+      "enableSort": true,
+      "horizontalAlignment": "LEFT",
+      "id": "customColumn2",
+      "index": 8,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": true,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": true,
+      "label": "Action",
+      "labelColor": "#FFFFFF",
+      "onClick": "{{\nutils.getProductWarehousesForUpdate();\nshowModal('mdl_productDetail');\n}}",
+      "originalId": "customColumn2",
+      "sticky": "",
+      "textSize": "0.875rem",
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
+    "customColumn3": {
+      "alias": "Delete",
+      "allowCellWrapping": false,
+      "buttonColor": "#f22b2b",
+      "buttonLabel": "Delete",
+      "buttonStyle": "rgb(3, 179, 101)",
+      "buttonVariant": "TERTIARY",
+      "cellBackground": "{{ currentRow.deletion_days_left < 1 ? \"#ffcccc\" : (currentRow.deletion_days_left <= 3 ? \"#fff5cc\" : \"transparent\") }}",
+      "columnType": "iconButton",
+      "computedValue": "",
+      "customAlias": "",
+      "enableFilter": true,
+      "enableSort": true,
+      "horizontalAlignment": "LEFT",
+      "iconName": "trash",
+      "id": "customColumn3",
+      "index": 10,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": true,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": true,
+      "label": "Delete",
+      "labelColor": "#FFFFFF",
+      "onClick": "{{showModal('mdl_confirmDelete')}}",
+      "originalId": "customColumn3",
+      "sticky": "",
+      "textSize": "0.875rem",
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
+    "deletion_date": {
+      "alias": "deletion_date",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "cellBackground": "{{ currentRow.deletion_days_left < 1 ? \"#ffcccc\" : (currentRow.deletion_days_left <= 3 ? \"#fff5cc\" : \"transparent\") }}",
+      "columnType": "date",
+      "computedValue": "{{(() => { const tableData = tbl_products.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"deletion_date\"])) : deletion_date })()}}",
+      "currencyCode": "USD",
+      "decimals": 0,
+      "enableFilter": true,
+      "enableSort": true,
+      "fontStyle": "",
+      "horizontalAlignment": "LEFT",
+      "id": "deletion_date",
+      "index": 7,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": true,
+      "label": "deletion_date",
+      "notation": "standard",
+      "originalId": "deletion_date",
+      "outputFormat": "DD/MM/YYYY",
+      "sticky": "",
+      "textColor": "",
+      "textSize": "0.875rem",
+      "thousandSeparator": true,
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
+    "deletion_days_left": {
+      "alias": "deletion_days_left",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "cellBackground": "{{ currentRow.deletion_days_left < 1 ? \"#ffcccc\" : (currentRow.deletion_days_left <= 3 ? \"#fff5cc\" : \"transparent\") }}",
+      "columnType": "number",
+      "computedValue": "{{(() => { const tableData = tbl_products.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"deletion_days_left\"])) : deletion_days_left })()}}",
+      "currencyCode": "USD",
+      "decimals": 0,
+      "enableFilter": true,
+      "enableSort": true,
+      "fontStyle": "",
+      "horizontalAlignment": "LEFT",
+      "id": "deletion_days_left",
+      "index": 10,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": true,
+      "label": "deletion_days_left",
+      "notation": "standard",
+      "originalId": "deletion_days_left",
+      "sticky": "",
+      "textColor": "",
+      "textSize": "0.875rem",
+      "thousandSeparator": true,
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
+    "deletion_hours_left": {
+      "alias": "deletion_hours_left",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "cellBackground": "{{ currentRow.deletion_days_left < 1 ? \"#ffcccc\" : (currentRow.deletion_days_left <= 3 ? \"#fff5cc\" : \"transparent\") }}",
+      "columnType": "number",
+      "computedValue": "{{(() => { const tableData = tbl_products.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"deletion_hours_left\"])) : deletion_hours_left })()}}",
+      "currencyCode": "USD",
+      "decimals": 0,
+      "enableFilter": true,
+      "enableSort": true,
+      "fontStyle": "",
+      "horizontalAlignment": "LEFT",
+      "id": "deletion_hours_left",
+      "index": 11,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": false,
+      "label": "deletion_hours_left",
+      "notation": "standard",
+      "originalId": "deletion_hours_left",
+      "sticky": "",
+      "textColor": "",
+      "textSize": "0.875rem",
+      "thousandSeparator": true,
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
+    "folder_name": {
+      "alias": "folder_name",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "cellBackground": "{{ currentRow.deletion_days_left < 1 ? \"#ffcccc\" : (currentRow.deletion_days_left <= 3 ? \"#fff5cc\" : \"transparent\") }}",
+      "columnType": "text",
+      "computedValue": "{{(() => { const tableData = tbl_products.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"folder_name\"])) : folder_name })()}}",
+      "currencyCode": "USD",
+      "decimals": 0,
+      "enableFilter": true,
+      "enableSort": true,
+      "fontStyle": "",
+      "horizontalAlignment": "LEFT",
+      "id": "folder_name",
+      "index": 5,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": true,
+      "label": "folder_name",
+      "notation": "standard",
+      "originalId": "folder_name",
+      "sticky": "",
+      "textColor": "",
+      "textSize": "0.875rem",
+      "thousandSeparator": true,
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
+    "id": {
+      "alias": "id",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "cellBackground": "{{ currentRow.deletion_days_left < 1 ? \"#ffcccc\" : (currentRow.deletion_days_left <= 3 ? \"#fff5cc\" : \"transparent\") }}",
+      "columnType": "number",
+      "computedValue": "{{(() => { const tableData = tbl_products.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"id\"])) : id })()}}",
+      "currencyCode": "USD",
+      "decimals": 0,
+      "enableFilter": true,
+      "enableSort": true,
+      "fontStyle": "",
+      "horizontalAlignment": "LEFT",
+      "id": "id",
+      "index": 0,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": false,
+      "label": "id",
+      "notation": "standard",
+      "originalId": "id",
+      "sticky": "",
+      "textColor": "",
+      "textSize": "0.875rem",
+      "thousandSeparator": true,
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
+    "owner": {
+      "alias": "owner",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "cellBackground": "{{ currentRow.deletion_days_left < 1 ? \"#ffcccc\" : (currentRow.deletion_days_left <= 3 ? \"#fff5cc\" : \"transparent\") }}",
+      "columnType": "text",
+      "computedValue": "{{(() => { const tableData = tbl_products.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"owner\"])) : owner })()}}",
+      "currencyCode": "USD",
+      "decimals": 0,
+      "enableFilter": true,
+      "enableSort": true,
+      "fontStyle": "",
+      "horizontalAlignment": "LEFT",
+      "id": "owner",
+      "index": 2,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": true,
+      "label": "owner",
+      "notation": "standard",
+      "originalId": "owner",
+      "sticky": "",
+      "textColor": "",
+      "textSize": "0.875rem",
+      "thousandSeparator": true,
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
+    "shutdown_date": {
+      "alias": "shutdown_date",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "cellBackground": "{{ currentRow.deletion_days_left < 1 ? \"#ffcccc\" : (currentRow.deletion_days_left <= 3 ? \"#fff5cc\" : \"transparent\") }}",
+      "columnType": "date",
+      "computedValue": "{{(() => { const tableData = tbl_products.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"shutdown_date\"])) : shutdown_date })()}}",
+      "currencyCode": "USD",
+      "decimals": 0,
+      "enableFilter": true,
+      "enableSort": true,
+      "fontStyle": "",
+      "horizontalAlignment": "LEFT",
+      "id": "shutdown_date",
+      "index": 6,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": true,
+      "label": "shutdown_date",
+      "notation": "standard",
+      "originalId": "shutdown_date",
+      "outputFormat": "DD/MM/YYYY",
+      "sticky": "",
+      "textColor": "",
+      "textSize": "0.875rem",
+      "thousandSeparator": true,
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
+    "shutdown_days_left": {
+      "alias": "shutdown_days_left",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "cellBackground": "{{ currentRow.deletion_days_left < 1 ? \"#ffcccc\" : (currentRow.deletion_days_left <= 3 ? \"#fff5cc\" : \"transparent\") }}",
+      "columnType": "number",
+      "computedValue": "{{(() => { const tableData = tbl_products.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"shutdown_days_left\"])) : shutdown_days_left })()}}",
+      "currencyCode": "USD",
+      "decimals": 0,
+      "enableFilter": true,
+      "enableSort": true,
+      "fontStyle": "",
+      "horizontalAlignment": "LEFT",
+      "id": "shutdown_days_left",
+      "index": 8,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": true,
+      "label": "shutdown_days_left",
+      "notation": "standard",
+      "originalId": "shutdown_days_left",
+      "sticky": "",
+      "textColor": "",
+      "textSize": "0.875rem",
+      "thousandSeparator": true,
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
+    "shutdown_hours_left": {
+      "alias": "shutdown_hours_left",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "cellBackground": "{{ currentRow.deletion_days_left < 1 ? \"#ffcccc\" : (currentRow.deletion_days_left <= 3 ? \"#fff5cc\" : \"transparent\") }}",
+      "columnType": "number",
+      "computedValue": "{{(() => { const tableData = tbl_products.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"shutdown_hours_left\"])) : shutdown_hours_left })()}}",
+      "currencyCode": "USD",
+      "decimals": 0,
+      "enableFilter": true,
+      "enableSort": true,
+      "fontStyle": "",
+      "horizontalAlignment": "LEFT",
+      "id": "shutdown_hours_left",
+      "index": 9,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": false,
+      "label": "shutdown_hours_left",
+      "notation": "standard",
+      "originalId": "shutdown_hours_left",
+      "sticky": "",
+      "textColor": "",
+      "textSize": "0.875rem",
+      "thousandSeparator": true,
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
+    "vcenter_vm_name": {
+      "alias": "vcenter_vm_name",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "cellBackground": "{{ currentRow.deletion_days_left < 1 ? \"#ffcccc\" : (currentRow.deletion_days_left <= 3 ? \"#fff5cc\" : \"transparent\") }}",
+      "columnType": "text",
+      "computedValue": "{{(() => { const tableData = tbl_products.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"vcenter_vm_name\"])) : vcenter_vm_name })()}}",
+      "currencyCode": "USD",
+      "decimals": 0,
+      "enableFilter": true,
+      "enableSort": true,
+      "fontStyle": "",
+      "horizontalAlignment": "LEFT",
+      "id": "vcenter_vm_name",
+      "index": 3,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": true,
+      "label": "vcenter_vm_name",
+      "notation": "standard",
+      "originalId": "vcenter_vm_name",
+      "sticky": "",
+      "textColor": "",
+      "textSize": "0.875rem",
+      "thousandSeparator": true,
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
+    "vm_identifier": {
+      "alias": "vm_identifier",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "cellBackground": "{{ currentRow.deletion_days_left < 1 ? \"#ffcccc\" : (currentRow.deletion_days_left <= 3 ? \"#fff5cc\" : \"transparent\") }}",
+      "columnType": "text",
+      "computedValue": "{{(() => { const tableData = tbl_products.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"vm_identifier\"])) : vm_identifier })()}}",
+      "currencyCode": "USD",
+      "decimals": 0,
+      "enableFilter": true,
+      "enableSort": true,
+      "fontStyle": "",
+      "horizontalAlignment": "LEFT",
+      "id": "vm_identifier",
+      "index": 1,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": false,
+      "label": "vm_identifier",
+      "notation": "standard",
+      "originalId": "vm_identifier",
+      "sticky": "",
+      "textColor": "",
+      "textSize": "0.875rem",
+      "thousandSeparator": true,
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
+    }
+  },
+  "renderMode": "CANVAS",
+  "rightColumn": 64,
+  "searchKey": "",
+  "showInlineEditingOptionDropdown": true,
+  "tableData": "{{get_vm_lifecycle.data}}",
+  "textSize": "0.875rem",
+  "topRow": 20,
+  "totalRecordsCount": 0,
+  "type": "TABLE_WIDGET_V2",
+  "version": 1,
+  "verticalAlignment": "CENTER",
+  "widgetId": "r7yit6f2ek",
+  "widgetName": "tbl_products"
+}

@@ -1,0 +1,7 @@
+SELECT
+    COUNT(id) AS total_managed_vms,
+    COUNT(DISTINCT owner) AS total_active_owners,
+    COUNT(id) FILTER (WHERE deletion_date > NOW() AND deletion_date <= NOW() + INTERVAL '3 days') AS expiring_soon,
+    COUNT(id) FILTER (WHERE deletion_date <= NOW() + INTERVAL '24 hours') AS critical_vms
+FROM 
+    terraform_remote_state.state_metadata;

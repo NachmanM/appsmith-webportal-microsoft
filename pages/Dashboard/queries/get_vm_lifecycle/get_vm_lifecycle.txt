@@ -1,0 +1,23 @@
+SELECT
+    m.id,
+    m.vcenter_uuid AS vm_identifier,
+    m.owner,
+    v.vm_name AS vcenter_vm_name,
+    v.power_state AS current_vcenter_status,
+    v.folder_name,
+    m.shutdown_date,
+    m.deletion_date,
+    -- Calculate days and hours remaining for shutdown
+    EXTRACT(DAY FROM (m.shutdown_date - NOW())) AS shutdown_days_left,
+    EXTRACT(HOUR FROM (m.shutdown_date - NOW())) AS shutdown_hours_left,
+    -- Calculate days and hours remaining for deletion
+    EXTRACT(DAY FROM (m.deletion_date - NOW())) AS deletion_days_left,
+    EXTRACT(HOUR FROM (m.deletion_date - NOW())) AS deletion_hours_left
+FROM
+    terraform_remote_state.state_metadata m
+LEFT JOIN
+    terraform_remote_state.vcenter_inventory_cache v 
+ON 
+    m.vcenter_uuid = v.vm_moid
+ORDER BY
+    m.shutdown_date ASC;
