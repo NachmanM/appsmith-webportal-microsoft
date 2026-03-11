@@ -32,14 +32,12 @@
     }
   },
   "columnOrder": [
-    "customColumn1",
     "customColumn2",
     "customColumn3",
     "id",
     "vm_identifier",
     "owner",
     "vcenter_vm_name",
-    "current_vcenter_status",
     "folder_name",
     "shutdown_date",
     "deletion_date",
@@ -47,9 +45,10 @@
     "shutdown_hours_left",
     "deletion_days_left",
     "deletion_hours_left",
+    "current_vcenter_status",
     "EditActions1"
   ],
-  "columnUpdatedAt": 1772989581155,
+  "columnUpdatedAt": 1773059354493,
   "columnWidthMap": {
     "Category": 122,
     "CostPrice": 115,
@@ -59,14 +58,19 @@
     "Name": 181,
     "SalePrice": 124,
     "TotalStock": 112,
+    "current_vcenter_status": 107,
     "customColumn1": 139,
     "customColumn2": 89,
     "customColumn3": 88,
-    "shutdown_days_left": 195,
+    "deletion_date": 132,
+    "deletion_days_left": 149,
+    "shutdown_date": 158,
+    "shutdown_days_left": 162,
     "shutdown_hours_left": 195,
     "status": 75,
     "step": 62,
-    "task": 245
+    "task": 245,
+    "vcenter_vm_name": 141
   },
   "defaultPageSize": 0,
   "defaultSelectedRowIndex": 0,
@@ -87,9 +91,6 @@
     },
     {
       "key": "tableData"
-    },
-    {
-      "key": "primaryColumns.customColumn1.computedValue"
     },
     {
       "key": "primaryColumns.EditActions1.saveButtonColor"
@@ -114,9 +115,6 @@
     },
     {
       "key": "primaryColumns.customColumn2.boxShadow"
-    },
-    {
-      "key": "primaryColumns.customColumn1.textColor"
     },
     {
       "key": "primaryColumns.id.computedValue"
@@ -156,9 +154,6 @@
     },
     {
       "key": "cellBackground"
-    },
-    {
-      "key": "primaryColumns.customColumn1.cellBackground"
     },
     {
       "key": "primaryColumns.EditActions1.cellBackground"
@@ -218,9 +213,6 @@
     },
     {
       "key": "primaryColumns.customColumn2.onClick"
-    },
-    {
-      "key": "primaryColumns.customColumn1.textColor"
     },
     {
       "key": "tableData"
@@ -329,43 +321,13 @@
       "isEditable": false,
       "isSaveVisible": true,
       "isVisible": true,
-      "label": "current_vcenter_status",
+      "label": "Status",
       "notation": "standard",
       "originalId": "current_vcenter_status",
       "sticky": "",
       "textColor": "",
       "textSize": "0.875rem",
       "thousandSeparator": true,
-      "validation": {},
-      "verticalAlignment": "CENTER",
-      "width": 150
-    },
-    "customColumn1": {
-      "alias": "Stock",
-      "allowCellWrapping": false,
-      "buttonStyle": "rgb(3, 179, 101)",
-      "cellBackground": "{{ currentRow.deletion_days_left < 1 ? \"#ffcccc\" : (currentRow.deletion_days_left <= 3 ? \"#fff5cc\" : \"transparent\") }}",
-      "columnType": "text",
-      "computedValue": "{{(() => { const tableData = tbl_products.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => ( \ncurrentRow.TotalStock || 0 + ` (${utils.returnStockStatus(currentRow.TotalStock, currentRow.LowStock).status})`\n)) :  \ncurrentRow.TotalStock || 0 + ` (${utils.returnStockStatus(currentRow.TotalStock, currentRow.LowStock).status})`\n })()}}",
-      "enableFilter": true,
-      "enableSort": true,
-      "horizontalAlignment": "LEFT",
-      "id": "customColumn1",
-      "index": 6,
-      "isCellEditable": false,
-      "isCellVisible": true,
-      "isDerived": true,
-      "isDisabled": false,
-      "isDiscardVisible": true,
-      "isEditable": false,
-      "isSaveVisible": true,
-      "isVisible": true,
-      "label": "Stock",
-      "labelColor": "#FFFFFF",
-      "originalId": "customColumn1",
-      "sticky": "",
-      "textColor": "{{tbl_products.processedTableData.map((currentRow, currentIndex) => ( utils.returnStockStatus(currentRow.TotalStock, currentRow.LowStock).color))}}",
-      "textSize": "0.875rem",
       "validation": {},
       "verticalAlignment": "CENTER",
       "width": 150
@@ -463,7 +425,7 @@
       "isEditable": false,
       "isSaveVisible": true,
       "isVisible": true,
-      "label": "deletion_date",
+      "label": "Deletion date",
       "notation": "standard",
       "originalId": "deletion_date",
       "outputFormat": "DD/MM/YYYY",
@@ -498,7 +460,7 @@
       "isEditable": false,
       "isSaveVisible": true,
       "isVisible": true,
-      "label": "deletion_days_left",
+      "label": "Days to deletion",
       "notation": "standard",
       "originalId": "deletion_days_left",
       "sticky": "",
@@ -566,7 +528,7 @@
       "isEditable": false,
       "isSaveVisible": true,
       "isVisible": true,
-      "label": "folder_name",
+      "label": "Folder",
       "notation": "standard",
       "originalId": "folder_name",
       "sticky": "",
@@ -634,7 +596,7 @@
       "isEditable": false,
       "isSaveVisible": true,
       "isVisible": true,
-      "label": "owner",
+      "label": "Owner",
       "notation": "standard",
       "originalId": "owner",
       "sticky": "",
@@ -668,7 +630,7 @@
       "isEditable": false,
       "isSaveVisible": true,
       "isVisible": true,
-      "label": "shutdown_date",
+      "label": "Shutdown date",
       "notation": "standard",
       "originalId": "shutdown_date",
       "outputFormat": "DD/MM/YYYY",
@@ -703,7 +665,7 @@
       "isEditable": false,
       "isSaveVisible": true,
       "isVisible": true,
-      "label": "shutdown_days_left",
+      "label": "Days to shutdown",
       "notation": "standard",
       "originalId": "shutdown_days_left",
       "sticky": "",
@@ -771,7 +733,7 @@
       "isEditable": false,
       "isSaveVisible": true,
       "isVisible": true,
-      "label": "vcenter_vm_name",
+      "label": "VM Name",
       "notation": "standard",
       "originalId": "vcenter_vm_name",
       "sticky": "",

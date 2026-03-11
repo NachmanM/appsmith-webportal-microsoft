@@ -1,0 +1,5 @@
+UPDATE terraform_remote_state.state_metadata
+SET 
+    shutdown_date = {{dp_edit_shutdown.selectedDate}},
+    deletion_date = {{dp_edit_deletion.selectedDate}}
+WHERE id = {{tbl_products.selectedRow.id}};

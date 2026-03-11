@@ -46,7 +46,7 @@
     ],
     "name": "VM_Details",
     "pageId": "DetailsVM",
-    "runBehaviour": "ON_PAGE_LOAD",
+    "runBehaviour": "MANUAL",
     "userSetOnLoad": true
   }
 }

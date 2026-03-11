@@ -5,43 +5,43 @@ export default {
 
 		try {
 			const insertResult = await Insert_Pending_VM.run();
-
-			// Extract the 'pending-...' MOID returned by PostgreSQL
 			tempMoid = insertResult[0].vm_moid; 
-
-			// This is for the popup that has the option to go to VM
 			storeValue('new_vm_moid', tempMoid);
 
 			const rawUuid = tempMoid.replace('pending-', '');
-			// 3. Immediately refresh the Tree UI to display the pending VM
 			await get_vm_cached.run();
-
-			// 4. Lock UI interactions during API handoff
 			showModal('modal_vm_creation');
 
+			// Because FastAPI now returns 200, this will NOT jump to the catch block automatically on a Terraform failure.
 			const apiResponse = await create_vm.run({ transaction_uuid: rawUuid });
+
+			// CRITICAL FIX: Manually check if the 200 OK response contains your custom error payload.
+			if (apiResponse && apiResponse.error && apiResponse.error.detail) {
+				// Manually throw the Terraform error string to jump to the catch block!
+				throw new Error(apiResponse.error.detail);
+			}
 
 			closeModal('modal_vm_creation');
 			showAlert(`Provisioning complete for VM: ${vmName}.`, "success");
 
-			// 2. Extract the real MOID from the FastAPI JSON payload
-			const realMoid = apiResponse.real_moid
-			if (realMoid) {
-                navigateTo('DetailsVM', { "vm_moid": realMoid }, 'SAME_WINDOW');
-            }
+			if (apiResponse?.real_moid) {
+				navigateTo('DetailsVM', { "vm_moid": apiResponse.real_moid }, 'SAME_WINDOW');
+			}
+
 		} catch (error) {
-			// 8. Critical Rollback Procedure
-			// If create_vm.run() or any other step fails/times out, purge the synthetic database record.
+			// Rollback Procedure
 			if (tempMoid) {
 				await Delete_Pending_VM.run({ moid: tempMoid });
-
-				// Force a UI tree refresh to physically remove the orphaned pending VM from the screen.
 				await get_vm_cached.run(); 
 			}
 
 			closeModal('modal_vm_creation');
-			showAlert(`Execution failure for ${vmName}. System state rolled back.`, "error");
-			console.error(error);
+
+			// 'error.message' now contains the exact Terraform string we threw in the try block!
+			const backendErrorDetail = error.message || String(error);
+
+			showAlert(`Execution failure for ${vmName}. System state rolled back. Detail: ${backendErrorDetail}`, "error");
+			console.error("VM Provisioning True Error:", backendErrorDetail);
 		}
 	}
 }

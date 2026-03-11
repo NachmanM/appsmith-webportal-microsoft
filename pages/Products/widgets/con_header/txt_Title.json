@@ -43,7 +43,7 @@
   ],
   "shouldScrollContents": true,
   "shouldTruncate": false,
-  "text": "Inventory Management",
+  "text": "VM Management",
   "textAlign": "LEFT",
   "textColor": "{{appsmith.theme.colors.backgroundColor}}",
   "topRow": 2,

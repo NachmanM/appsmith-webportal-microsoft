@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 65,
+  "bottomRow": 47,
   "boxShadow": "none",
   "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
   "buttonStyle": "PRIMARY_BUTTON",
@@ -16,11 +16,7 @@
       "key": "borderRadius"
     }
   ],
-  "dynamicPropertyPathList": [
-    {
-      "key": "onClick"
-    }
-  ],
+  "dynamicPropertyPathList": [],
   "dynamicTriggerPathList": [
     {
       "key": "onClick"
@@ -34,8 +30,8 @@
   "isLoading": false,
   "isVisible": true,
   "key": "0qiexam129",
-  "leftColumn": 50,
-  "onClick": "{{utils.updateProduct();\ncloseModal('mdl_productDetail')\n}}",
+  "leftColumn": 51,
+  "onClick": "{{update_vm_dates.run().then(() => {\n  get_vm_lifecycle.run();\n});\ncloseModal('mdl_productDetail');}}",
   "originalBottomRow": 65,
   "originalTopRow": 60,
   "parentId": "avtuexvxul",
@@ -43,13 +39,13 @@
   "recaptchaType": "V3",
   "renderMode": "CANVAS",
   "resetFormOnClick": false,
-  "rightColumn": 61,
+  "rightColumn": 62,
   "searchTags": [
     "click",
     "submit"
   ],
   "text": "Update",
-  "topRow": 60,
+  "topRow": 42,
   "type": "BUTTON_WIDGET",
   "version": 1,
   "widgetId": "3wcdomqmro",
